@@ -26,10 +26,57 @@ Projects that have contributed to this template:
 
 ## Evolution History
 
-### v2.2.0 (Planned) - Production Patterns from Centaur
+### v2.3.0 - Production Patterns (Centaur + CarPooling)
 
 **Date**: 2026-03-07
-**Status**: 📝 Designed - Ready for Implementation
+**Status**: ✅ Released
+
+#### Added (Priority 1: HIGH VALUE - from v2.2.0 design)
+
+**From Centaur** (documented):
+- Two-PC Continuity System (`.ai/session_logs/`, knowledge/)
+- Autonomous Agent Decision Framework (decision tables)
+- Sprint Log Pattern (`SPRINT_LOG.md` template)
+
+**From CarPooling** (implemented):
+- Backup/Rollback Strategy (`archive/backups/`, `/create-backup`)
+- Architectural Decision Records (`decisions/`, `/record-decision`)
+
+#### New Commands
+
+- `/create-backup` - Create versioned .tar.gz backups
+- `/record-decision` - Create numbered ADRs
+
+#### New Templates
+
+- `archive/backups/README.md` - Backup manifest
+- `decisions/000-template.md` - ADR template
+
+#### Documentation Updates
+
+- CLAUDE.md v2.3.0 with Production Patterns section
+- README.md v2.3.0 with "What's New" section
+- Complete pattern integration
+
+#### Key Innovations
+
+1. **Backup/Rollback**: Faster than git for experiments, includes .gitignored files
+2. **ADRs**: Institutional memory for architectural "why" decisions
+3. **Multi-Pattern Release**: Combined learnings from 2 different project types
+
+#### Impact
+
+- **12 total patterns** now in template (8 from Centaur + 4 from CarPooling)
+- **9 commands** total (7 from v2.1.0 + 2 new)
+- **Production-proven** from real business system + demo app
+- **Pain points solved**: Experimentation safety, decision memory, cleanup confidence
+
+---
+
+### v2.2.0 (Merged into v2.3.0) - Centaur Patterns Design
+
+**Date**: 2026-03-07
+**Status**: ✅ Merged into v2.3.0
 
 #### Added (Priority 1: HIGH VALUE)
 
@@ -188,14 +235,18 @@ Track potential learnings from projects:
 
 | Project | Potential Learning | Priority | Status |
 |---------|-------------------|----------|--------|
-| Centaur | Session logging pattern | High | ✅ Extracted (v2.2.0) |
-| Centaur | Two-PC continuity system | High | ✅ Extracted (v2.2.0) |
-| Centaur | Sprint log memory pattern | Medium | ✅ Extracted (v2.2.0) |
-| Centaur | Chronicle historical narrative | Medium | ✅ Extracted (v2.2.0) |
-| Centaur | Autonomous agent framework | High | ✅ Extracted (v2.2.0) |
-| Centaur | Trash-can cleanup pattern | Medium | ✅ Extracted (v2.2.0) |
-| Centaur | Linked documentation system | Medium | ✅ Extracted (v2.2.0) |
-| Centaur | Root hygiene rules | Low | ✅ Extracted (v2.2.0) |
+| Centaur | Session logging pattern | High | ✅ Extracted (v2.3.0) |
+| Centaur | Two-PC continuity system | High | ✅ Extracted (v2.3.0) |
+| Centaur | Sprint log memory pattern | Medium | ✅ Extracted (v2.3.0) |
+| Centaur | Chronicle historical narrative | Medium | ✅ Extracted (v2.3.0) |
+| Centaur | Autonomous agent framework | High | ✅ Extracted (v2.3.0) |
+| Centaur | Trash-can cleanup pattern | Medium | ✅ Extracted (v2.3.0) |
+| Centaur | Linked documentation system | Medium | ✅ Extracted (v2.3.0) |
+| Centaur | Root hygiene rules | Low | ✅ Extracted (v2.3.0) |
+| CarPooling | Backup/Rollback Strategy | Medium | ✅ Extracted (v2.3.0) |
+| CarPooling | Architectural Decision Records | Medium | ✅ Extracted (v2.3.0) |
+| CarPooling | Session Journal Logs | Low | ✅ Documented (v2.3.0) |
+| CarPooling | Audit Report Automation | Low | ✅ Documented (v2.3.0) |
 | - | - | - | - |
 
 ## Template Improvement Ideas
