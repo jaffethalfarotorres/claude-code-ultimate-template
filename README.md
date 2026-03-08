@@ -319,11 +319,46 @@ Based on:
 - Real-world usage patterns from production projects
 - Feedback from Claude Code developers worldwide
 
+## 🌱 Self-Improving Template
+
+**This template learns and evolves!**
+
+Every project using this template can contribute improvements back:
+
+```
+Your Projects → Extract Learnings → Improve Template → Better for Everyone
+                                            ↓
+                                    Template Evolves 🌱
+```
+
+### How It Works
+
+1. **Use the Template**: Build your project with it
+2. **Innovate**: Create custom rules, commands, patterns
+3. **Share Back**: Use `/learn-from-project` to extract insights
+4. **Everyone Benefits**: Your innovations improve the template
+
+### Learning Commands
+
+- **`/learn-from-project <path>`** - Analyze a project and extract generalizable patterns
+- Automated by **template-improver skill** - Continuously identifies improvement opportunities
+
+See [TEMPLATE_EVOLUTION.md](TEMPLATE_EVOLUTION.md) for learning history and contribution guidelines.
+
+---
+
 ## 🔖 Version
 
-**2.0.0** (March 2026) - Ultimate Template Edition
+**2.1.0** (March 2026) - Learning System Edition
 
-### What's New in 2.0
+### What's New in 2.1
+- 🧠 **Self-improving system** - Template learns from real-world usage
+- 🔍 `/learn-from-project` command - Extract patterns from projects
+- 📊 **template-improver skill** - Automated enhancement discovery
+- 📈 **TEMPLATE_EVOLUTION.md** - Track improvements over time
+- 🌐 **Feedback loop** - Projects make template better
+
+### What's in 2.0
 - ✨ Modular `.claude/rules/` system
 - ✨ Enhanced commands (`/custom-init`, `/migrate-project`, `/security-audit`)
 - ✨ Comprehensive migration guide

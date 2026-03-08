@@ -152,7 +152,18 @@ Closes #123
 - `/custom-init` - Generate CLAUDE.md for any project
 - `/migrate-project` - Migrate existing projects
 - `/security-audit` - Security review
+- `/learn-from-project` - Extract learnings from projects using this template
 - `/deploy` - Deployment workflow
+
+## Self-Improving Template System
+
+This template learns from projects that use it:
+
+- **template-improver skill** - Analyzes project adaptations and extracts patterns
+- **TEMPLATE_EVOLUTION.md** - Tracks how the template improves over time
+- **Feedback loop** - Your innovations can improve the template for everyone
+
+When you build something innovative with this template, use `/learn-from-project` to share insights back. The template gets better with each project!
 
 ## Code Quality Standards
 
