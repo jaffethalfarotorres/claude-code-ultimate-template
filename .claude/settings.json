@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/claude-code-settings.json",
+  "description": "Claude Code project settings - shared across team",
+
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git branch *)",
+      "Bash(git checkout *)",
+      "Bash(npm *)",
+      "Bash(yarn *)",
+      "Bash(pnpm *)",
+      "Bash(node *)",
+      "Bash(python *)",
+      "Bash(pytest *)",
+      "Bash(ls *)",
+      "Bash(pwd)",
+      "Bash(cat *)",
+      "Bash(mkdir *)",
+      "Bash(rm *)",
+      "Bash(mv *)",
+      "Bash(cp *)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(**/secrets/*)",
+      "Read(**/*.key)",
+      "Read(**/*.pem)",
+      "Read(**/.aws/*)",
+      "Read(**/.ssh/*)",
+      "Write(./.env)",
+      "Write(**/*.key)",
+      "Write(**/*.pem)",
+      "Bash(rm -rf /)",
+      "Bash(sudo *)",
+      "Bash(chmod 777 *)"
+    ]
+  },
+
+  "env": {
+    "NODE_ENV": "development",
+    "LOG_LEVEL": "info"
+  },
+
+  "attribution": {
+    "enabled": true,
+    "commitMessage": "\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>",
+    "pullRequestBody": "\n\n---\n🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+  },
+
+  "spinnerTipsEnabled": true
+}

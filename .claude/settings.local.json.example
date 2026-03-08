@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/claude-code-settings.json",
+  "description": "Local settings template - copy to settings.local.json and customize",
+
+  "comment": "Copy this file to .claude/settings.local.json and add your personal settings",
+
+  "env": {
+    "ANTHROPIC_API_KEY": "your-api-key-here",
+    "DATABASE_URL": "your-local-database-url",
+    "API_BASE_URL": "http://localhost:3000"
+  },
+
+  "permissions": {
+    "comment": "Add personal permission overrides here",
+    "allow": [],
+    "deny": []
+  },
+
+  "spinnerTipsEnabled": false,
+
+  "comment2": "MCP Server Configuration",
+  "mcp": {
+    "comment": "Add your MCP servers here",
+    "servers": {
+      "example-github": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-github"],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "your-github-token-here"
+        }
+      }
+    }
+  }
+}

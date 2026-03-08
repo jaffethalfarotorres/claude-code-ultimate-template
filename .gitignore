@@ -59,6 +59,6 @@ ENV/
 coverage/
 .nyc_output
 
-# Claude Code specific (if needed)
-# Uncomment to ignore local-only commands/skills
-# .claude/local/
+# Claude Code specific
+.claude/settings.local.json
+.claude/local/
