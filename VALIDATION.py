@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Machine-First Architecture Validator
 
@@ -21,6 +22,11 @@ import os
 from pathlib import Path
 import re
 import unicodedata
+import io
+
+# Fix Windows console encoding
+if sys.platform == "win32":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 # ANSI color codes
 GREEN = "\033[92m"
