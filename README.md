@@ -1,6 +1,6 @@
 # Claude Code Ultimate Template
 
-**Version 2.0.0** - The definitive, production-ready template for Claude Code projects (2026 Edition)
+**Version 2.3.0** - The definitive, production-ready template for Claude Code projects (2026 Edition - Production Patterns)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude-Code-blue.svg)](https://code.claude.com)
@@ -17,6 +17,10 @@ A comprehensive, self-explanatory template following Anthropic's latest best pra
 - 🔒 **Security-First** - Built-in security patterns and guidelines
 - 🚀 **Migration Tools** - Easy adoption for existing projects
 - 📚 **Complete Documentation** - Guides for every aspect
+- 🌱 **Self-Improving** - Learns from real-world projects and evolves
+- 💾 **Backup/Rollback** (v2.3.0 NEW!) - Quick `.tar.gz` snapshots before major changes
+- 📋 **Architectural Decision Records** (v2.3.0 NEW!) - Document the "why" behind decisions
+- 🔄 **Session Continuity** (v2.3.0 NEW!) - Work seamlessly across multiple machines
 
 ## 🚀 Quick Start
 
@@ -224,6 +228,72 @@ Personal overrides, includes:
 - **Never committed** (in .gitignore)
 
 Copy `.claude/settings.local.json.example` to get started.
+
+## 🆕 What's New in v2.3.0 (Production Patterns)
+
+This release adds **4 battle-tested patterns** extracted from real-world production projects:
+
+### 💾 Backup/Rollback Strategy
+
+Quick `.tar.gz` backups before major changes:
+
+```bash
+/create-backup  # Versioned safety net
+```
+
+**Benefits:**
+- Faster than git branches for experiments
+- Includes .gitignored files (.env, node_modules)
+- Pre-deployment snapshots
+- Easy rollback if something breaks
+
+**Example:** `archive/backups/v1.3-database-migration.tar.gz`
+
+### 📋 Architectural Decision Records (ADRs)
+
+Document the "why" behind decisions:
+
+```bash
+/record-decision  # Creates numbered ADR
+```
+
+**When to use:**
+- Technology choices (React vs Vue)
+- Architecture patterns (microservices vs monolith)
+- Process decisions (testing strategy)
+- Tool selections (CI/CD platform)
+
+**Example:** `decisions/004-use-postgresql-for-database.md`
+
+### 🔄 Session Continuity (Multi-Machine Workflows)
+
+Work seamlessly across multiple machines:
+
+**Session Logs:** `.ai/session_logs/` - Real-time incremental logging
+**Persistent Memory:** `knowledge/` - SPRINT_LOG, CHRONICLE, MEMORY
+**Git as Shared Brain:** Conversation history stays local, context lives in repo
+
+**Use case:** Work on PC A during the day, continue on PC B at home without losing context.
+
+### 🗑️ Reversible Operations (Trash-Can Pattern)
+
+Archive-first cleanup approach:
+
+1. Move questionable files to `archive/trash-can/{category}/`
+2. Review in second pass
+3. Delete only after confirmation
+
+**Result:** Confident autonomous cleanup with safety net.
+
+---
+
+**These patterns solve real pain points:**
+- ✅ Session continuity across machines (#1 Claude Code pain point)
+- ✅ Safe experimentation with quick rollback
+- ✅ Institutional memory via ADRs
+- ✅ Fearless cleanup with reversibility
+
+**Source:** Extracted from [Centaur](https://github.com/jaffethalfarotorres/Centaur) (production business system) and [CarPooling](https://github.com/jaffethalfarotorres/CarPooling) (demo app) projects.
 
 ## 📚 Documentation
 

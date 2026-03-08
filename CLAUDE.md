@@ -1,6 +1,6 @@
 # Claude Code Repository Template
 
-**Version**: 2.0.0 (2026 Edition)
+**Version**: 2.3.0 (2026 Edition - Production Patterns)
 **Last Updated**: March 2026
 
 This is the ultimate production-ready template for Claude Code projects, following Anthropic's latest best practices and community standards.
@@ -42,9 +42,19 @@ Claude/
 ├── .claude/
 │   ├── commands/              # Custom slash commands
 │   ├── skills/                # Reusable skills with SKILL.md
-│   ├── rules/                 # Modular project rules (new!)
+│   ├── rules/                 # Modular project rules
 │   ├── settings.json          # Project-level settings
 │   └── settings.local.json.example  # Local settings template
+├── archive/
+│   ├── backups/               # Version backups (v2.3.0 NEW!)
+│   └── trash-can/             # Reversible deletion staging
+├── decisions/                 # Architectural Decision Records (v2.3.0 NEW!)
+├── knowledge/                 # Persistent memory (optional)
+│   ├── SPRINT_LOG.md         # Operational metrics
+│   ├── CHRONICLE.md          # Historical narrative
+│   └── MEMORY.md             # Current state
+├── .ai/
+│   └── session_logs/          # Session continuity logs
 ├── docs/                      # Extended documentation
 ├── templates/                 # Project type templates
 ├── .editorconfig              # Editor configuration
@@ -53,6 +63,7 @@ Claude/
 ├── CLAUDE.md                  # This file - Claude's memory
 ├── CONTRIBUTING.md            # Contribution guidelines
 ├── MIGRATION.md               # Migration guide
+├── TEMPLATE_EVOLUTION.md      # Template learning history
 └── README.md                  # Full documentation
 ```
 
@@ -338,11 +349,81 @@ When working with this project:
 9. **Think modular**: Keep changes focused and single-purpose
 10. **Stay updated**: Keep CLAUDE.md and rules current
 
+## Production Patterns (v2.3.0 NEW!)
+
+### Backup/Rollback Strategy
+
+Before major changes, create quick backups:
+
+```bash
+/create-backup  # Creates versioned .tar.gz backup
+```
+
+**Benefits:**
+- Faster than git branches for experiments
+- Includes .gitignored files (.env, node_modules)
+- Pre-deployment safety net
+- Easy rollback if something breaks
+
+**Location:** `archive/backups/`
+**Manifest:** `archive/backups/README.md`
+
+### Architectural Decision Records (ADRs)
+
+Document **why** architectural choices were made:
+
+```bash
+/record-decision  # Creates numbered ADR
+```
+
+**When to use:**
+- Technology choices (React vs Vue)
+- Architecture patterns (microservices vs monolith)
+- Process decisions (testing strategy)
+- Tool selections (CI/CD platform)
+
+**Location:** `decisions/`
+**Template:** `decisions/000-template.md`
+
+**Example:** `decisions/003-use-postgresql-for-database.md`
+
+### Session Continuity (Multi-Machine Workflows)
+
+For teams working across multiple machines:
+
+**Session Logs:** `.ai/session_logs/YYYY-MM-DD_HH-MM_{machine}.md`
+- Real-time incremental logging during work
+- Git as shared brain (conversation history is local)
+- Automatic session start protocol
+
+**Persistent Memory:** `knowledge/`
+- `SPRINT_LOG.md` - Operational metrics and backlog
+- `CHRONICLE.md` - Historical narrative and learnings
+- `MEMORY.md` - Current state and pending items
+
+**Use case:** Work on PC A, continue on PC B without losing context.
+
+### Reversible Operations
+
+**Trash-can pattern:**
+1. Move questionable files to `archive/trash-can/{category}/`
+2. Review in second pass
+3. Delete only after confirmation
+
+**Result:** Confident autonomous cleanup with safety net.
+
+---
+
 ## Version History
 
+- **2.3.0** (March 2026): Production patterns from real-world usage (backups, ADRs, session continuity)
+- **2.2.0** (March 2026): 8 patterns from Centaur project
+- **2.1.0** (March 2026): Self-improving learning system
 - **2.0.0** (March 2026): Ultimate template with 2026 best practices
 - **1.0.0** (Initial): Basic Claude Code template
 
 ---
 
 **Remember**: This CLAUDE.md is a living document. Update it as your project evolves.
+
+**Template Evolution**: This template learns from projects that use it. See [TEMPLATE_EVOLUTION.md](TEMPLATE_EVOLUTION.md) for how we continuously improve.
