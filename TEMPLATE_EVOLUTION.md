@@ -21,15 +21,86 @@ Projects that have contributed to this template:
 
 | Project | Date | Key Learnings | Template Version |
 |---------|------|---------------|------------------|
-| Centaur | 2026-03-07 | Session logging, Two-PC continuity, Academic solver patterns | v2.0.0 → v2.1.0 |
+| **Centaur** | 2026-03-07 | Session logging, Two-PC continuity, Sprint Log, Chronicle, Autonomous agent framework | v2.0.0 → v2.2.0 |
 | [Future] | - | - | - |
 
 ## Evolution History
 
-### v2.1.0 (Planned) - Learning System
+### v2.2.0 (Planned) - Production Patterns from Centaur
 
 **Date**: 2026-03-07
-**Status**: 🚧 In Development
+**Status**: 📝 Designed - Ready for Implementation
+
+#### Added (Priority 1: HIGH VALUE)
+
+**Two-PC Continuity System**
+- `.ai/session_logs/` directory structure
+- `MEMORY.md` template for persistent state tracking
+- `/start-session` command implementing automatic session protocol
+- Documentation in CLAUDE.md for multi-machine workflows
+
+**Autonomous Agent Decision Framework**
+- `.claude/rules/decision-framework.md` with autonomous vs. approval patterns
+- Decision table examples (reversible vs. irreversible actions)
+- Integration with agent skill templates
+- Clear boundaries for AI autonomy
+
+**Sprint Log Pattern**
+- `SPRINT_LOG.md` template in `knowledge/` directory
+- Operational metrics tracking
+- Backlog management
+- `/update-sprint-log` command for easy updates
+
+#### Added (Priority 2: MEDIUM VALUE)
+
+**Chronicle Pattern**
+- `CHRONICLE.md` template for historical narrative
+- Entry format documentation
+- Differentiation from SPRINT_LOG (operations vs. journey)
+
+**Trash-Can Pattern**
+- `archive/trash-can/` directory structure
+- Reversible cleanup workflow documentation
+- Integration with cleanup commands
+
+**Linked Documentation System**
+- Folder README.md templates
+- Documentation conventions
+- `/audit-readmes` command
+
+**Root Hygiene Rules**
+- Standards for root folder contents
+- Feature-based documentation organization
+- `/audit-root` command
+
+#### Learned From
+- **Centaur Project v4.0 LITE**: Production business system operating academic ghostwriting service
+- **8 Generalizable Patterns** extracted from real-world usage
+- **Proven Results**: Multi-PC workflow, autonomous maintenance, session continuity
+
+#### Key Innovations
+
+1. **Session Continuity Across Machines**: Git + session logs solve the "conversation history doesn't persist" problem
+2. **Persistent AI Memory**: SPRINT_LOG + CHRONICLE give Claude context across sessions
+3. **Safe Autonomy**: Clear decision framework lets AI work independently within boundaries
+4. **Reversible Operations**: Trash-can pattern enables confident autonomous cleanup
+5. **Self-Documenting Repos**: Folder READMEs and root hygiene create navigable structure
+
+#### Impact
+- Solves **#1 pain point** of Claude Code: session continuity
+- Enables **autonomous maintenance** with safety guardrails
+- Provides **persistent memory** across sessions and machines
+- Creates **production-ready** patterns from real business use
+
+#### Full Analysis
+See [LEARNING_REPORT_CENTAUR_2026-03-07.md](LEARNING_REPORT_CENTAUR_2026-03-07.md) for complete pattern analysis and implementation details.
+
+---
+
+### v2.1.0 - Learning System
+
+**Date**: 2026-03-07
+**Status**: ✅ Released
 
 #### Added
 - `/learn-from-project` command - Extract learnings from projects using template
@@ -37,7 +108,7 @@ Projects that have contributed to this template:
 - `.claude/skills/template-improver/` - Automated template enhancement skill
 
 #### Learned From
-- **Centaur Project**: Sophisticated session management, two-PC workflow
+- **Centaur Project**: Discovered need for systematic learning extraction
 
 #### Rationale
 Projects using this template develop innovative patterns. Capturing and generalizing these improvements makes the template better for everyone.
@@ -117,26 +188,41 @@ Track potential learnings from projects:
 
 | Project | Potential Learning | Priority | Status |
 |---------|-------------------|----------|--------|
-| Centaur | Session logging pattern | High | 📝 Analyzing |
-| Centaur | Two-PC continuity system | High | 📝 Analyzing |
-| Centaur | Sprint log memory pattern | Medium | 📋 Queued |
+| Centaur | Session logging pattern | High | ✅ Extracted (v2.2.0) |
+| Centaur | Two-PC continuity system | High | ✅ Extracted (v2.2.0) |
+| Centaur | Sprint log memory pattern | Medium | ✅ Extracted (v2.2.0) |
+| Centaur | Chronicle historical narrative | Medium | ✅ Extracted (v2.2.0) |
+| Centaur | Autonomous agent framework | High | ✅ Extracted (v2.2.0) |
+| Centaur | Trash-can cleanup pattern | Medium | ✅ Extracted (v2.2.0) |
+| Centaur | Linked documentation system | Medium | ✅ Extracted (v2.2.0) |
+| Centaur | Root hygiene rules | Low | ✅ Extracted (v2.2.0) |
 | - | - | - | - |
 
 ## Template Improvement Ideas
 
 Ideas extracted but not yet implemented:
 
-### High Priority
-- [ ] Add session logging template to `.claude/skills/`
-- [ ] Create multi-machine continuity pattern documentation
-- [ ] Add memory/state management rule file
+### High Priority (v2.2.0 Implementation)
+- [x] Add session logging template to `.ai/session_logs/` — ✅ Designed
+- [x] Create multi-machine continuity pattern documentation — ✅ Designed
+- [x] Add memory/state management (SPRINT_LOG, MEMORY.md) — ✅ Designed
+- [x] Autonomous agent decision framework — ✅ Designed
+- [ ] Implement `/start-session` command
+- [ ] Implement `/update-sprint-log` command
+- [ ] Create MEMORY.md, SPRINT_LOG.md, CHRONICLE.md templates
+- [ ] Add `.claude/rules/decision-framework.md`
 
-### Medium Priority
-- [ ] Document academic/research project patterns
-- [ ] Add web scraping security enhancements
-- [ ] Create project-specific CLAUDE.md generators
+### Medium Priority (v2.3.0+)
+- [x] Document trash-can cleanup pattern — ✅ Designed (v2.2.0)
+- [x] Linked documentation system — ✅ Designed (v2.2.0)
+- [x] Root hygiene rules — ✅ Designed (v2.2.0)
+- [ ] Create `/audit-readmes` command
+- [ ] Create `/audit-root` command
+- [ ] Add folder README templates
 
 ### Low Priority / Research
+- [ ] Document academic/research project patterns (domain-specific)
+- [ ] Add web scraping security enhancements (Centaur-specific)
 - [ ] Explore AI agent orchestration patterns
 - [ ] Research cross-project knowledge sharing
 - [ ] Investigate automated template updates
@@ -148,7 +234,8 @@ Track template improvement over time:
 | Version | Rules | Commands | Skills | Doc Pages | Projects Using | Learnings Integrated |
 |---------|-------|----------|--------|-----------|----------------|----------------------|
 | v2.0.0  | 5     | 6        | 1      | 4         | 1              | 0                    |
-| v2.1.0  | 5     | 7        | 2      | 5         | 1+             | 3 (planned)          |
+| v2.1.0  | 5     | 7        | 2      | 5         | 1              | 0 (added system)     |
+| v2.2.0  | 6     | 9        | 2      | 8         | 2+             | 8 (from Centaur)     |
 
 ## Community Impact
 
@@ -156,7 +243,8 @@ Projects that have been improved by using this template:
 
 | Project | Before Template | After Template | Key Improvements |
 |---------|----------------|----------------|------------------|
-| Centaur | Basic setup | Modular rules, 6 commands | Better organization, automation |
+| Centaur v4.0 LITE | Custom structure, no rules system | Modular rules (5), Enhanced commands (6), Contributing docs | Better organization, standardization, PR #22 ready |
+| Claude Template | v2.1.0 (learning system only) | v2.2.0 (8 production patterns) | Session continuity, autonomous framework, persistent memory |
 | - | - | - | - |
 
 ## Future Vision
